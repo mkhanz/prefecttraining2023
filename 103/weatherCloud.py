@@ -22,7 +22,7 @@ def fetch_weather(lat: float, lon: float):
     return weather
 
 @flow()
-def print_all_the_facts(most_recent_temp,most_recent_dewpoint)
+def print_all_the_facts(most_recent_temp,most_recent_dewpoint):
     print(f"Most recent temp F: {most_recent_temp} degrees")
     print(f"Most recent depoint F: {most_recent_dewpoint} degrees")
 
