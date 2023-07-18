@@ -22,8 +22,8 @@ def fetch_weather(lat: float, lon: float):
     return weather
 
 @flow()
-def do_all_the_things():
-    weather = fetch_weather(33.7, -117.7)
+def do_all_the_things(lat=33.7, lon=-117.7):
+    weather = fetch_weather(lat, lon)
     most_recent_temp = float(weather.json()["hourly"]["temperature_2m"][0])
     most_recent_dewpoint = float(weather.json()["hourly"]["dewpoint_2m"][0])
     print(f"Most recent temp F: {most_recent_temp} degrees")
@@ -33,4 +33,4 @@ def do_all_the_things():
 
 
 if __name__ == "__main__":
-    do_all_the_things()
+    do_all_the_things(33.7,-117.7)
